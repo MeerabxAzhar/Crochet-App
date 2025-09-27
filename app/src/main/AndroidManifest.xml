@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Request necessary permissions -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Specify that telephony hardware is not required -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Crochet_app">
+        <activity
+            android:name=".CheckoutActivity"
+            android:exported="false" />
+        <!-- SplashScreenActivity set as the launcher -->
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Other activities -->
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MusicFragment"
+            android:exported="false" />
+
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:exported="true" /> <!-- MainActivity no longer launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" /> <!-- Other internal activities -->
+        <activity
+            android:name=".SocksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MufflerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SweaterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".YarnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".CrochetItem"
+            android:exported="false" />
+        <activity
+            android:name=".SendSmsActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

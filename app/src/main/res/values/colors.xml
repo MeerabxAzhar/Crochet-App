@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Add this line to define the color pink -->
+    <color name="pink">#FFC0CB</color> <!-- You can use any pink shade you prefer -->
+
+    <!-- Other colors that may already be defined in your project -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>
